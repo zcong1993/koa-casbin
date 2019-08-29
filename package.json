@@ -1,0 +1,72 @@
+{
+  "name": "@zcong/koa-casbin",
+  "version": "0.0.0",
+  "description": "casbin middleware for koa",
+  "main": "./dist/index.js",
+  "files": [
+    "dist",
+    "src"
+  ],
+  "scripts": {
+    "build": "tsc",
+    "test": "npm run lint && npm run jest",
+    "test:cov": "npm run lint && npm run jest:cov",
+    "lint": "tslint -p .",
+    "format": "prettier --write '**/*.{ts,json,md}'",
+    "jest": "jest --detectOpenHandles --forceExit",
+    "jest:cov": "jest --coverage --detectOpenHandles --forceExit",
+    "prepublishOnly": "npm run build"
+  },
+  "types": "./dist/index.d.ts",
+  "author": "zcong1993",
+  "license": "MIT",
+  "peerDependencies": {
+    "koa": "^2.8.1"
+  },
+  "devDependencies": {
+    "@types/debug": "^4.1.5",
+    "@types/jest": "^24.0.18",
+    "@types/koa": "^2.0.49",
+    "@types/node": "^12.7.2",
+    "husky": "^3.0.4",
+    "jest": "^24.9.0",
+    "koa": "^2.8.1",
+    "lint-staged": "^9.2.5",
+    "prettier": "^1.18.2",
+    "ts-jest": "^24.0.2",
+    "tslint": "^5.19.0",
+    "tslint-config-airbnb": "^5.11.1",
+    "tslint-config-prettier": "^1.18.0",
+    "typescript": "^3.6.2"
+  },
+  "jest": {
+    "testEnvironment": "node",
+    "transform": {
+      "^.+\\.tsx?$": "ts-jest"
+    },
+    "testRegex": "(/__tests__/.*|(\\.|/)(test|spec))\\.(jsx?|tsx?)$",
+    "moduleFileExtensions": [
+      "ts",
+      "tsx",
+      "js",
+      "jsx",
+      "json",
+      "node"
+    ]
+  },
+  "lint-staged": {
+    "*.{js,json,ts}": [
+      "yarn format",
+      "git add ."
+    ]
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "yarn lint && lint-staged"
+    }
+  },
+  "dependencies": {
+    "casbin": "^3.0.4",
+    "debug": "^4.1.1"
+  }
+}
