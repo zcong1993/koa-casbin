@@ -4,6 +4,42 @@
 
 > casbin middleware for koa
 
+## Install
+
+```bash
+$ npm i @zcong/koa-casbin --save
+```
+
+## Usage
+
+### Use a customized authorizer
+
+see [examples](./examples)
+
+```ts
+// app.ts
+// ...
+class MyAuthorizer extends Authorizer {
+  getUserName(ctx: Koa.Context) {
+    return ctx.user
+  }
+}
+
+app.use(authMiddleware())
+app.use(
+  authz({
+    newEnforcer: async () => {
+      const enforcer = await newEnforcer(
+        `${__dirname}/authz_model.conf`,
+        `${__dirname}/authz_policy.csv`
+      )
+      return enforcer
+    },
+    authorizer: MyAuthorizer
+  })
+)
+```
+
 ## License
 
 MIT &copy; zcong1993

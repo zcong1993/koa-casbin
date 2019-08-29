@@ -1,0 +1,5 @@
+p, group, /test, (GET)|(POST)
+p, group, /test2, (GET)|(POST)
+p, test, /, *
+
+g, zcong, group
