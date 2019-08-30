@@ -13,8 +13,8 @@
     "test:cov": "npm run lint && npm run jest:cov",
     "lint": "tslint -p .",
     "format": "prettier --write '**/*.{ts,json,md}'",
-    "jest": "jest --detectOpenHandles --forceExit",
-    "jest:cov": "jest --coverage --detectOpenHandles --forceExit",
+    "jest": "jest",
+    "jest:cov": "jest --coverage",
     "prepublishOnly": "npm run build"
   },
   "types": "./dist/index.d.ts",

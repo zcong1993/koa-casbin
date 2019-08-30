@@ -1,6 +1,6 @@
 p, group1, /resource1, (GET)|(POST)
 p, group2, /resource2, *
-p, group3, /user/:id/resource *
+p, group3, /users/:id/resource *
 p, user1, /resource1, *
 
 g, user2, group1
