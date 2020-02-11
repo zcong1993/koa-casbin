@@ -70,7 +70,7 @@
     }
   },
   "dependencies": {
-    "casbin": "^3.0.4",
+    "casbin": "^4.0.0",
     "debug": "^4.1.1"
   }
 }
