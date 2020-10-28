@@ -36,7 +36,7 @@
     "koa-router": "^9.0.0",
     "lint-staged": "^10.0.0",
     "prettier": "^2.0.0",
-    "supertest": "^5.0.0",
+    "supertest": "^6.0.0",
     "ts-jest": "^26.0.0",
     "tslint": "^6.0.0",
     "tslint-config-airbnb": "^5.11.1",
