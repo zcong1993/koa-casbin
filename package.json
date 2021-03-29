@@ -30,7 +30,7 @@
     "@types/koa-router": "^7.0.42",
     "@types/node": "^12.7.2",
     "@types/supertest": "^2.0.8",
-    "husky": "^5.0.0",
+    "husky": "^6.0.0",
     "jest": "^26.0.0",
     "koa": "^2.8.1",
     "koa-router": "^10.0.0",
